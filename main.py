@@ -4,7 +4,7 @@
 def is_digit(data):
     """Checks data for belonging to int or float numbers
     return boolean"""
-    if type(data) in (int, float):
+    if isinstance(data, (float, int)):
         return True
     return False
 
@@ -45,7 +45,7 @@ def my_sum(addend1, addend2):
     print(addend1+addend2)
 
 
-def sign_definition (calculated_number):
+def sign_definition(calculated_number):
     """Function #5. Takes number and give information about it's sign on a screen"""
     if is_digit(calculated_number):
         if calculated_number > 0:
