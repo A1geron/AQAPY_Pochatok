@@ -49,8 +49,8 @@ def inner_square(counter, sized):
     if counter <= 0:
         print('*' * (sized + 2))
         return None
-    blessing = '*' + ' ' * sized + '*'
-    print(blessing)
+    resulting_raw = '*' + ' ' * sized + '*'
+    print(resulting_raw)
     return inner_square(counter-1, sized)
 
 
