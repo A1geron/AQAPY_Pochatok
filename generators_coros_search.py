@@ -35,11 +35,10 @@ def get_words(chars):
     Length of the returned list must be up to 10 words"""
     trimmed_dict = copy.deepcopy(WORDS)
     result = []
-    if not trimmed_dict.get(chars[0]):
-        return result[0:10]
     for i in chars:
-        if trimmed_dict.get(i):
-            trimmed_dict = trimmed_dict.pop(i)
+        if not trimmed_dict.get(i):
+            return result[0:10]
+        trimmed_dict = trimmed_dict.pop(i)
 
     def inner_get(inner_dict):
         for key in inner_dict:
